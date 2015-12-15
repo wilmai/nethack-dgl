@@ -53,7 +53,7 @@ SHELL=/bin/sh
 # SHELL=E:/GEMINI2/MUPFEL.TTP
 
 # Usually, the C compiler driver is used for linking:
-#LINK=$(CC)
+LINK=$(CC)
 
 # Pick the SYSSRC and SYSOBJ lines corresponding to your desired operating
 # system.
@@ -78,7 +78,7 @@ SYSOBJ = ioctl.o unixmain.o unixtty.o unixunix.o unixres.o
 #	if you get setcgtty() warnings during execution, you are feeding gcc
 #		a non-ANSI <sys/ioctl.h> -- either run fixincludes on it or use
 #		-traditional in CFLAGS
-# CC = gcc
+CC = gcc
 #
 #	For Bull DPX/2 systems at B.O.S. 2.0 or higher use the following:
 #
@@ -141,8 +141,8 @@ SYSOBJ = ioctl.o unixmain.o unixtty.o unixunix.o unixres.o
 
 # flags for Linux
 #   compile normally
-# CFLAGS = -O2 -fomit-frame-pointer -I../include
-# LFLAGS = -L/usr/X11R6/lib
+CFLAGS = -O2 -fomit-frame-pointer -I../include
+LFLAGS = -L/usr/X11R6/lib
 #   OR compile backwards compatible a.out format
 # CFLAGS = -O2 -b i486-linuxaout -fomit-frame-pointer -I../include
 # LFLAGS = -b i486-linuxaout -L/usr/X11R6/lib
@@ -236,8 +236,8 @@ WINBEOBJ =
 
 #
 #
-#WINSRC = $(WINTTYSRC)
-#WINOBJ = $(WINTTYOBJ)
+WINSRC = $(WINTTYSRC)
+WINOBJ = $(WINTTYOBJ)
 
 # on some systems the termcap library is in -ltermcap or -lcurses
 # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
@@ -252,7 +252,7 @@ WINBEOBJ =
 # WINTTYLIB = -ltermcap
 # WINTTYLIB = -lcurses
 # WINTTYLIB = -lcurses16
-# WINTTYLIB = -lncurses
+WINTTYLIB = -lncurses
 #WINTTYLIB = -ltermlib
 #
 # libraries for X11
@@ -277,7 +277,7 @@ WINGEMLIB = -le_gem -lgem
 # libraries for BeOS 
 WINBELIB = -lbe
 
-#WINLIB = $(WINTTYLIB)
+WINLIB = $(WINTTYLIB)
 
 # any other strange libraries your system needs (for Sysunix only -- the more
 # specialized targets should already be right)

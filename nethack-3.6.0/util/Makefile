@@ -32,7 +32,7 @@ NHSROOT=..
 
 # if you are using gcc as your compiler,
 #	uncomment the CC definition below if it's not in your environment
-# CC = gcc
+CC = gcc
 #
 #	For Bull DPX/2 systems at B.O.S. 2.0 or higher use the following:
 #
@@ -89,8 +89,8 @@ NHSROOT=..
 
 # flags for Linux
 #   compile normally
-# CFLAGS = -O2 -fomit-frame-pointer -I../include
-# LFLAGS = -L/usr/X11R6/lib
+CFLAGS = -O2 -fomit-frame-pointer -I../include
+LFLAGS = -L/usr/X11R6/lib
 #   OR compile backwards compatible a.out format
 # CFLAGS = -O2 -b i486-linuxaout -fomit-frame-pointer -I../include
 # LFLAGS = -b i486-linuxaout -L/usr/X11R6/lib
@@ -118,11 +118,8 @@ OBJDIR = ../src
 
 # yacc/lex programs to use to generate *_comp.h, *_lex.c, and *_yacc.c.
 # if, instead of yacc/lex you have bison/flex, comment/uncomment the following.
-YACC     = yacc
-LEX      = lex
-# YACC     = bison -y
-# YACC     = byacc
-# LEX      = flex
+YACC     = bison -y
+LEX      = flex
 
 # these are the names of the output files from YACC/LEX. Under MS-DOS
 # and similar systems, they may differ
