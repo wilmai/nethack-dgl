@@ -158,7 +158,7 @@ if test "$enable_shmem" = yes; then
    AC_CHECK_HEADERS([sys/shm.h], [], [AC_MSG_ERROR([sys/shm.h not found.])], [])
    AC_MSG_RESULT([Enabled showing number of watchers.])
    AC_DEFINE(USE_SHMEM,1,[Use shared memory block])
-   LIBS="$LIBS -lrt"
+   LIBS="$LIBS -lpthread"
    # or -pthread?
 fi
 
