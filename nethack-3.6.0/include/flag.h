@@ -179,6 +179,9 @@ struct instance_flags {
     int override_ID;       /* true to force full identification of objects */
     int suppress_price;    /* controls doname() for unpaid objects */
     coord travelcc;        /* coordinates for travel_cache */
+#ifdef SIMPLE_MAIL
+    booleam simplemail;
+#endif
     boolean window_inited; /* true if init_nhwindows() completed */
     boolean vision_inited; /* true if vision is ready */
     boolean sanity_check;  /* run sanity checks */

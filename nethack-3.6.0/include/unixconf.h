@@ -101,7 +101,7 @@
  * If you want the static parts of your playground on a read-only file
  * system, define VAR_PLAYGROUND to be where the variable parts are kept.
  */
-/* #define VAR_PLAYGROUND "/var/lib/games/nethack" */
+#define VAR_PLAYGROUND "/nh360/var"
 
 /*
  * Define DEF_PAGER as your default pager, e.g. "/bin/cat" or "/usr/ucb/more"
@@ -188,7 +188,7 @@
 #endif
 #endif
 
-#define MAILCKFREQ 50
+//#define MAILCKFREQ 50
 #endif /* MAIL */
 
 /*
@@ -281,7 +281,7 @@
 #define tgetch getchar
 
 #ifndef NOSHELL
-#define SHELL /* do not delete the '!' command */
+//#define SHELL /* do not delete the '!' command */
 #endif
 
 #include "system.h"

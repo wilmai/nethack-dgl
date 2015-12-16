@@ -57,7 +57,9 @@ char *argv[];
     boolean resuming = FALSE; /* assume new game */
 
     sys_early_init();
-
+#ifdef SIMPLE_MAIL
+    char* e_simple = NULL;
+#endif
 #if defined(__APPLE__)
     {
 /* special hack to change working directory to a resource fork when
@@ -88,6 +90,11 @@ char *argv[];
             }
         }
     }
+#endif
+
+#ifdef SIMPLE_MAIL
+    e_simple = nh_getenv("SIMPLEMAIL");
+    iflags.simplemail = (e_simple ? 1 : 0);
 #endif
 
     hname = argv[0];

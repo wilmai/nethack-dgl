@@ -214,20 +214,20 @@
  *      maximum number of scores to keep, for example) if SYSCF is enabled.
  */
 #ifndef PERSMAX
-#define PERSMAX 3 /* entries per name/uid per char. allowed */
+#define PERSMAX 64 /* entries per name/uid per char. allowed */
 #endif
 #ifndef POINTSMIN
 #define POINTSMIN 1 /* must be > 0 */
 #endif
 #ifndef ENTRYMAX
-#define ENTRYMAX 100 /* must be >= 10 */
+#define ENTRYMAX 1024 /* must be >= 10 */
 #endif
 #ifndef PERS_IS_UID
-#if !defined(MICRO) && !defined(MAC) && !defined(WIN32)
-#define PERS_IS_UID 1 /* delete for PERSMAX per name; now per uid */
-#else
+//#if !defined(MICRO) && !defined(MAC) && !defined(WIN32)
+//#define PERS_IS_UID 1 /* delete for PERSMAX per name; now per uid */
+//#else
 #define PERS_IS_UID 0
-#endif
+//#endif
 #endif
 
 /*
@@ -317,7 +317,7 @@
  * otherwise it will be the current directory.
  */
 #ifndef HACKDIR
-#define HACKDIR "/usr/games/lib/nethackdir"
+#define HACKDIR "/nh360"
 #endif
 
 /*
@@ -340,7 +340,7 @@
 /* If GENERIC_USERNAMES is defined, and the player's username is found
  * in the list, prompt for character name instead of using username.
  * A public server should probably disable this. */
-#define GENERIC_USERNAMES "play player game games nethack nethacker"
+//#define GENERIC_USERNAMES "play player game games nethack nethacker"
 
 /*
  * Section 3:   Definitions that may vary with system type.

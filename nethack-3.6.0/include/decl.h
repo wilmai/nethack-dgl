@@ -413,6 +413,10 @@ E struct plinemsg_type *plinemsg_types;
 E char *ARGV0;
 #endif
 
+#ifdef SIMPLE_MAIL
+E int mailckfreq;
+#endif
+
 #undef E
 
 #endif /* DECL_H */

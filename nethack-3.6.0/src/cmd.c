@@ -530,33 +530,7 @@ domonability(VOID_ARGS)
 int
 enter_explore_mode(VOID_ARGS)
 {
-    if (wizard) {
-        You("are in debug mode.");
-    } else if (discover) {
-        You("are already in explore mode.");
-    } else {
-#ifdef SYSCF
-#if defined(UNIX)
-        if (!sysopt.explorers || !sysopt.explorers[0]
-            || !check_user_string(sysopt.explorers)) {
-            You("cannot access explore mode.");
-            return 0;
-        }
-#endif
-#endif
-        pline(
-        "Beware!  From explore mode there will be no return to normal game.");
-        if (paranoid_query(ParanoidQuit,
-                           "Do you want to enter explore mode?")) {
-            clear_nhwindow(WIN_MESSAGE);
-            You("are now in non-scoring explore mode.");
-            discover = TRUE;
-        } else {
-            clear_nhwindow(WIN_MESSAGE);
-            pline("Resuming normal game.");
-        }
-    }
-    return 0;
+    You("cannot explore. Mach has willed it so.");
 }
 
 STATIC_PTR int

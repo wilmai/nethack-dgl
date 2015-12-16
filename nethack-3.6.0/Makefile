@@ -31,11 +31,11 @@ NHSROOT=.
 # MAKE = make
 
 # make NetHack
-#PREFIX	 = /usr
-GAME     = nethack
+PREFIX	 = /apps
+GAME     = nethack.uaa
 # GAME     = nethack.prg
-#GAMEUID  = games
-#GAMEGRP  = bin
+GAMEUID  = nethack
+GAMEGRP  = nethack
 
 # Permissions - some places use setgid instead of setuid, for instance
 # See also the option "SECURE" in include/config.h
@@ -53,8 +53,8 @@ DIRPERM  = 0755
 # therefore there should not be anything in HACKDIR that you want to keep
 # (if there is, you'll have to do the installation by hand or modify the
 # instructions)
-#HACKDIR  = $(PREFIX)/games/lib/$(GAME)dir
-#VARDIR  = $(HACKDIR)
+HACKDIR  = $(PREFIX)/nh360
+VARDIR  = $(HACKDIR)/var
 # Where nethack.sh in installed.  If this is not defined, the wrapper is not used.
 #SHELLDIR = $(PREFIX)/games
 
