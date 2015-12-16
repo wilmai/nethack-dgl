@@ -317,7 +317,7 @@
  * otherwise it will be the current directory.
  */
 #ifndef HACKDIR
-#define HACKDIR "/nh360"
+#define HACKDIR "/apps/nh360"
 #endif
 
 /*
