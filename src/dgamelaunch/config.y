@@ -138,26 +138,26 @@ KeyPair: TYPE_CMDQUEUE '[' TYPE_CMDQUEUENAME ']'
       if (globalconfig.shed_uid != (uid_t)-1)
         break;
 
-      if (!strcmp($3, "root"))
-      {
-        fprintf(stderr, "%s:%d: I refuse to run as root! Aborting.\n", config, line);
-	graceful_exit(8);
-      }
+//      if (!strcmp($3, "root"))
+//      {
+//        fprintf(stderr, "%s:%d: I refuse to run as root! Aborting.\n", config, line);
+//	graceful_exit(8);
+//      }
       globalconfig.shed_user = strdup($3);
       if ((usr = getpwnam($3)) != NULL)
       {
-        if (usr->pw_uid != 0)
+//        if (usr->pw_uid != 0)
 	{
           globalconfig.shed_uid = usr->pw_uid;
 	  if (!silent)
 	    fprintf(stderr, "%s:%d: suggest replacing 'shed_user = \"%s\"' line with 'shed_uid = %d'\n",
 	      config, line, $3, usr->pw_uid);
 	}
-	else
-	{
-	  fprintf(stderr, "%s:%d: I refuse to run as %s (uid 0!) Aborting.\n", config, line, $3);
-	  graceful_exit(9);
-	}
+//	else
+//	{
+//	  fprintf(stderr, "%s:%d: I refuse to run as %s (uid 0!) Aborting.\n", config, line, $3);
+//	  graceful_exit(9);
+//	}
       }
       else
       {
@@ -253,11 +253,11 @@ KeyPair: TYPE_CMDQUEUE '[' TYPE_CMDQUEUENAME ']'
 	  config, line, $3, globalconfig.shed_uid);
 
       /* Naive user protection - do not allow running as user root */
-      if ($3 == 0)
-      {
-        fprintf(stderr, "%s:%d: I refuse to run as uid 0 (root)! Aborting.\n", config, line);
-        graceful_exit(11);
-      }
+//      if ($3 == 0)
+//      {
+//        fprintf(stderr, "%s:%d: I refuse to run as uid 0 (root)! Aborting.\n", config, line);
+//        graceful_exit(11);
+//      }
 
       globalconfig.shed_uid = $3;
       break;
