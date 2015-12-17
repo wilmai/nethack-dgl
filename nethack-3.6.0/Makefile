@@ -31,7 +31,7 @@ NHSROOT=.
 # MAKE = make
 
 # make NetHack
-PREFIX	 = /apps
+PREFIX	 = /root
 GAME     = nethack
 GAMEUID  = nethack
 GAMEGRP  = nethack

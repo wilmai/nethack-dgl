@@ -1,5 +1,5 @@
 /* Lexical analyzer for dgamelaunch's configuration file. */
-
+%option noyywrap
 %{
 
 #include <stdio.h>
