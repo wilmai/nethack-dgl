@@ -1,0 +1,9 @@
+$INCLUDE(/root/dgldir/dgl_header) 
+
+ Game: Nethack 3.6.0
+
+ p) Play
+ e) Edit settings
+ q) Quit
+
+ => 

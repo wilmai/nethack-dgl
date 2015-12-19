@@ -1,0 +1,22 @@
+# See the top of the screen for a list of commands you can use
+# for this editor.
+# The hat '^' represents the ctrl key
+# E.g. The menu is accessed using '^[' ('ctrl-[')
+
+OPTIONS=showexp,showscore,time,color,!autopickup
+OPTIONS=autodig,boulder:0,hilite_pet
+OPTIONS=scores:10t 2a o
+OPTIONS=disclose:+i +a +v +g +c
+
+# You'd best change the fruit and pet names. --Mach][
+OPTIONS=fruit:n00b's fruit
+CATNAME=n00b's cat
+DOGNAME=n00b's dog
+OPTIONS=horsename:n00b's horse
+
+# Suggestions from Mach
+#OPTIONS=number_pad:1
+
+# For more information on what you can set in your nethackrc file, refer to:
+#   http://www.nethack.org/v343/Guidebook.html#_TOCentry_42
+# Happy hacking!

@@ -5,7 +5,7 @@ pushd nethack-3.6.0
 make all
 make install
 popd
-cp configs/sysconf /root/nh360/
+cp -R configs/nh360/* /root/nh360/
 
 # Install dgamelaunch
 pushd dgamelaunch
@@ -20,6 +20,12 @@ ln -s "$DGLINSTDIR/$DGLBIN" "$DGLINSTDIR/dgamelaunch"
 # Copy editors
 cp ee "$DGLINSTDIR/"
 cp virus "$DGLINSTDIR/"
+touch "$DGLINSTDIR/dgl-login"
+touch "$DGLINSTDIR/dgl-lock"
 popd
-# Copy config
-cp configs/dgamelaunch.conf "$DGLINSTDIR/"
+cp -R configs/dgamelaunch/* "$DGLINSTDIR/"
+
+# Copy in data
+mkdir -p /root/data
+cp -R configs/data/* /root/data/
+

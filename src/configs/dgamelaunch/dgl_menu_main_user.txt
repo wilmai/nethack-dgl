@@ -1,0 +1,11 @@
+$INCLUDE(/root/dgldir/dgl_header) 
+
+ Logged in as: $USERNAME
+
+ c) Change password
+ e) Change email address
+ w) Watch games in progress
+ n) Play NetHack 3.6.0
+ q) Quit
+
+ => 

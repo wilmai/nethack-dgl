@@ -2838,11 +2838,11 @@ main (int argc, char** argv)
   if (geteuid () != globalconfig.shed_uid)
     {
       /* chroot */
-      if (chroot (globalconfig.chroot))
+      /* if (chroot (globalconfig.chroot))
 	{
 	  perror ("cannot change root directory");
 	  graceful_exit (2);
-	}
+	}*/
 
       if (chdir ("/"))
 	{
@@ -2851,7 +2851,7 @@ main (int argc, char** argv)
 	}
 
       /* shed privs. this is done immediately after chroot. */
-      if (setgroups (1, &globalconfig.shed_gid) == -1)
+      /*if (setgroups (1, &globalconfig.shed_gid) == -1)
 	{
 	  perror ("setgroups");
 	  graceful_exit (4);
@@ -2867,7 +2867,7 @@ main (int argc, char** argv)
 	{
 	  perror ("setuid");
 	  graceful_exit (6);
-	}
+	}*/
     }
 
   if (globalconfig.locale) {
