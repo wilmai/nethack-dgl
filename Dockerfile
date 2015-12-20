@@ -15,4 +15,4 @@ VOLUME /src
 # Mount output
 VOLUME /root
 
-CMD ["/bin/bash"]
+CMD ["/src/build.sh"]

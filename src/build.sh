@@ -1,3 +1,7 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+
 # Install nethack
 groupadd nethack
 useradd -g nethack nethack
@@ -28,4 +32,6 @@ cp -R configs/dgamelaunch/* "$DGLINSTDIR/"
 # Copy in data
 mkdir -p /root/data
 cp -R configs/data/* /root/data/
+
+chown -R dglaunch:dglaunch /root
 
