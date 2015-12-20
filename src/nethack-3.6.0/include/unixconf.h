@@ -162,6 +162,9 @@
 /* #define NO_MAILREADER */ /* have mail daemon just tell player of mail */
 
 #ifdef MAIL
+
+#define SIMPLE_MAIL
+
 #if defined(BSD) || defined(ULTRIX)
 #ifdef AMS
 #define AMS_MAILBOX "/Mailbox"

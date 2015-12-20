@@ -22,7 +22,6 @@ def listen(addr, port):
         os.dup2(conn.fileno(), 2)
         os.close(conn.fileno())
         os.close(slisten.fileno())
-        print "CONNECTED!"
         runuser = "/usr/sbin/runuser"
         os.execl(runuser, runuser,
             "-l", "dglaunch", "-c",

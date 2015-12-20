@@ -28,6 +28,7 @@ touch "$DGLINSTDIR/dgl-login"
 touch "$DGLINSTDIR/dgl-lock"
 popd
 cp -R configs/dgamelaunch/* "$DGLINSTDIR/"
+mkdir /root/mail
 
 # Copy in data
 mkdir -p /root/data
