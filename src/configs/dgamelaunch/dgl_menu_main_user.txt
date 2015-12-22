@@ -6,6 +6,7 @@ $INCLUDE(/root/dgldir/dgl_header)
  e) Change email address
  w) Watch games in progress
  n) Play NetHack 3.6.0
+ s) View highscores
  q) Quit
 
  => 
