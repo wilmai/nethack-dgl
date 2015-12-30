@@ -12,7 +12,13 @@
  * to back out the changes. */
 #define H2344_BROKEN
 
+#define TILE_ANSI_COMMAND 'z'
+
 #include "hack.h"
+
+#ifdef USE_TILES
+extern short glyph2tile[];
+#endif
 
 #ifdef TTY_GRAPHICS
 #include "dlb.h"
@@ -3052,6 +3058,11 @@ int bkglyph UNUSED;
 
     /* Move the cursor. */
     tty_curs(window, x, y);
+#ifdef USE_TILES
+    if (iflags.vt_nethack){
+        printf("\033[%i%c",glyph2tile[glyph],TILE_ANSI_COMMAND);
+    }
+#endif
 
 #ifndef NO_TERMS
     if (ul_hack && ch == '_') { /* non-destructive underscore */

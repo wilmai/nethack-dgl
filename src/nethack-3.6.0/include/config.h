@@ -48,6 +48,13 @@
 /* #define GNOME_GRAPHICS */ /* Gnome interface */
 /* #define MSWIN_GRAPHICS */ /* Windows NT, CE, Graphics */
 
+#define TTY_TILES_PATCH
+#ifdef TTY_TILES_PATCH
+#ifndef USE_TILES
+#define USE_TILES
+#endif
+#endif
+
 /*
  * Define the default window system.  This should be one that is compiled
  * into your system (see defines above).  Known window systems are:

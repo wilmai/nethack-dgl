@@ -184,6 +184,9 @@ struct instance_flags {
 #endif
     boolean window_inited; /* true if init_nhwindows() completed */
     boolean vision_inited; /* true if vision is ready */
+#if defined(USE_TILES) && defined(TTY_GRAPHICS)
+    boolean vt_nethack;         /* true if using telnet with tiles client */
+#endif
     boolean sanity_check;  /* run sanity checks */
     boolean mon_polycontrol; /* debug: control monster polymorphs */
     /* stuff that is related to options and/or user or platform preferences */
