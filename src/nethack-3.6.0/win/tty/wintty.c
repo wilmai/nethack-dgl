@@ -3191,6 +3191,7 @@ int
 tty_nhgetch()
 {
     int i;
+    int tmp;
 #ifdef UNIX
     /* kludge alert: Some Unix variants return funny values if getc()
      * is called, interrupted, and then called again.  There
